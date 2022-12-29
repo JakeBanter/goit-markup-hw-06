@@ -658,6 +658,13 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-input:hover,
+.subscribe-input:focus {
+  border-color: #4D5AE5;
 }
 
 .subscribe-input-container {
@@ -688,7 +695,7 @@ h2 {
 
 .subscribe-button:hover,
 .subscribe-button:focus {
-  background-color: #404BBF;
+  background-color: #404bbf;
 }
 
 .icon-send {
@@ -749,6 +756,10 @@ h2 {
 }
 
 .button-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   position: absolute;
   top: 24px;
   right: 24px;
@@ -760,10 +771,22 @@ h2 {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
-  background-image: url('../images/modal-close-buttom.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 8px 8px;
+  color: black;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-modal:hover,
+.button-modal:focus {
+  color: white;
+  background-color: #404bbf;
+}
+
+.icon-button-modal {
+  width: 8px;
+  height: 8px;
+
+  fill: currentColor;
 }
 
 .phrase-modal {
@@ -798,7 +821,7 @@ h2 {
   border: 1px solid #4d5ae5;
 }
 
-.label-modal {
+.label-modal-name {
   display: block;
   margin-bottom: 4px;
 
@@ -806,6 +829,17 @@ h2 {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.label-modal {
+  display: block;
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
   color: #8e8f99;
 }
 
@@ -835,9 +869,10 @@ h2 {
   display: inline-block;
 
   appearance: none;
-  position: absolute;
-  width: 100%;
-  height: 15px;
+}
+
+.checkbox-modal:focus ~ .custom-checkbox {
+  border-color: #404bbf;
 }
 
 .custom-checkbox {
@@ -890,16 +925,18 @@ h2 {
   line-height: inherit;
   letter-spacing: inherit;
   color: #4d5ae5;
+  text-decoration: none;
 }
 
 .submit-modal {
   display: block;
 
-  padding: 15px 31px;
+  padding: 16px 32px;
 
   background-color: #4d5ae5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: 0;
 
   margin: 0 auto;
   cursor: pointer;

@@ -417,15 +417,22 @@
             </li>
           </ul>
         </div>
-        
+
         <div class="subscribe-container">
           <b class="phrase-subscribe">Subscribe</b>
-          <div class="subscribe-input-container">
-            <input class="subscribe-input" type="email" placeholder="E-mail" />
+          <form class="subscribe-input-container" autocomplete="off">
+            <label
+              > <input
+                class="subscribe-input"
+                type="email"
+                placeholder="E-mail"
+            /> </label>
             <button class="subscribe-button" type="submit">
-              Subscribe <svg class="icon-send"><use href="./images/symbol-defs.svg#icon-send" /></svg>
+              Subscribe
+              <svg class="icon-send"><use href="./images/symbol-defs.svg#icon-send" /></svg>
             </button>
-          </div>
+          </form>
+        </div>
         </div>
       </div>
     </footer>
@@ -434,10 +441,12 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="button button-modal" type="button" data-modal-close></button>
+        <button class="button button-modal" type="button" data-modal-close>
+          <svg class="icon-button-modal"><use href="./images/symbol-defs.svg#modal-close-buttom" /></svg>
+        </button>
         <b class="phrase-modal">Leave your contacts and we will call you back</b>
         <form class="form" autocomplete="off">
-          <label class="label-modal" for="name">Name</label>
+          <label class="label-modal-name" for="name">Name</label>
           <div class="form-field">
             <input class="input-modal" type="text" id="name" name="neme" />
             <svg class="icon-input-modal"><use href="./images/symbol-defs.svg#user-modal" /></svg>
@@ -459,7 +468,7 @@
           <textarea
             class="textarea-modal"
             name="comment"
-            id=""
+            id="comment"
             cols="30"
             rows="10"
             placeholder="Text input"
